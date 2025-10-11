@@ -64,8 +64,8 @@
 1. MUST also indicate how the manufacturer is to apply vulnerability handling requirements set out in [Annex I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I) Part II.
 1. It MUST be coherent with [ASE_INT.1](../methodology.md#-introduction-and-description-ase_int1).
 1. If certain [ESRs are not applicable](../definitions.md#non-applicability-of-an-esr), it MUST be included a clear justification.
-### SPD-2 - Describe the OSPs.
-1. Each [OSP](../definitions.md#osps) is explained in sufficient detail to make it clearly understandable.
+### SPD-2 - Describe the Security Policies.
+1. Each [Security Policy](../definitions.md#security-policies) is explained in sufficient detail to make it clearly understandable.
 ### SPD-3 - Describe the assumptions about the operational environment of the PwDE.
 1. Each [assumption](../definitions.md#assumptions) is explained in enough detail for end users to understand.
 ## 🎯 Security Objectives (ASE_OBJ.1)
@@ -73,15 +73,15 @@
 1. The [security objectives for the operational environment](../definitions.md#security-objectives-for-the-operational-environment) may support the PwDE security functionality.
 ### OBJ-2 - Trace each security objective for the operational environment to the threat it addresses.
 1. Each security objective for the operational environment MAY trace back to threats.
-1. Each security objective for the operational environment MUST trace back to at least one threat, OSP or assumption.
+1. Each security objective for the operational environment MUST trace back to at least one threat, Security Policy or assumption.
 1. MUST be coherent with [ASE_SPD.1](../methodology.md#%EF%B8%8F-risk-assessment-analysis-ase_spd1).
-### OBJ-3 - Trace each security objective for the operational environment to the OSPs which it enforces.
-1. Each security objective for the operational environment MAY trace back to OSPs.
-1. Each security objective for the operational environment MUST trace back to at least one threat, OSP or assumption.
+### OBJ-3 - Trace each security objective for the operational environment to the Security Policies which it enforces.
+1. Each security objective for the operational environment MAY trace back to Security Policies.
+1. Each security objective for the operational environment MUST trace back to at least one threat, Security Policy or assumption.
 1. MUST be coherent with [ASE_SPD.1](../methodology.md#%EF%B8%8F-risk-assessment-analysis-ase_spd1).
 ### OBJ-4 - Trace each security objective for the operational environment to the assumptions it supports.
 1. Each security objective for the operational environment MAY trace back to assumptions.
-1. Each security objective for the operational environment MUST trace back to at least one threat, OSP or assumption.
+1. Each security objective for the operational environment MUST trace back to at least one threat, Security Policy or assumption.
 1. MUST be coherent with [ASE_SPD.1](../methodology.md#%EF%B8%8F-risk-assessment-analysis-ase_spd1).
 ### OBJ-5 - Demonstrate that the security objectives for the operational environment uphold all assumptions.
 1. All security objectives for the operational environment related to an assumption MUST support maintaining the operational environment.
@@ -92,9 +92,7 @@
 1. MUST be well-defined and no misunderstanding may occur due to the introduction of vague terms.
 1. MUST be described for an audience assumed to have a reasonable knowledge of IT, security and the CRA.
 1. SHOULD add a [Security Function](../definitions.md#security-function) to cover the [Reset to its original state](../definitions.md#reset-to-its-original-state-requirement).
-1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Identification Mechanism](../definitions.md#identification-mechanism-requirement).
-1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Authentication Mechanism](../definitions.md#authentication-mechanism-requirement).
-1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Access Management Mechanism](../definitions.md#access-management-mechanism-requirement).
+1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Identification, Authentication and Access Management Mechanism](../definitions.md#identification-authentication-and-access-management-mechanism-requirement).
 1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Reporting unauthorized access Mechanism](../definitions.md#reporting-unauthorized-access-requirement).
 1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Confidential data Mechanism](../definitions.md#confidential-data-requirement).
 1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Integrity of data Mechanism](../definitions.md#integrity-of-data-requirement).
@@ -108,13 +106,13 @@
 1. Each [Security Function](../definitions.md#security-function) MUST trace back to at least one threat for the PwDE.
 1. The justification for a threat MUST show whether the threat is removed, diminished or mitigated.
 
-### REQ-3 - For each OSP, the Security Functions must demonstrate that they are suitable to enforce that OSP.
-1. Each OSP MUST trace back to Security Functions or Security Objectives of the [[ASE_REQ.1]](../methodology.md#-security-functionalities-ase_req1--ase_tss1) or [[ASE_OBJ.1]](../methodology.md#-security-objectives-ase_obj1).
-1. The OSP MUST be satisfied if all related Security Functions are implemented and all related assumptions hold.
-1. The TOE MUST provide mechanisms to enforce those Security Functions so that the OSP is covered.
-1. Each Security Function that traces back to an OSP MUST actually contribute to the enforcement of that OSP.
-1. The tracing MUST NOT just be a simple relation of Security Functions with OSPs, but a detailed explanation.
-1. MUST be coherent with [ASE_SPD.1](../methodology.md#%EF%B8%8F-risk-assessment-analysis-ase_spd1
+### REQ-3 - The Security Functions must demonstrate that they are suitable to enforce each Security Policy.
+1. Each Security Policy MUST trace back to Security Functions or Security Objectives of the [[ASE_REQ.1]](../methodology.md#-security-functionalities-ase_req1--ase_tss1) or [[ASE_OBJ.1]](../methodology.md#-security-objectives-ase_obj1).
+1. The Security Policy MUST be satisfied if all related Security Functions are implemented and all related assumptions hold.
+1. The TOE MUST provide mechanisms to enforce those Security Functions so that the Security Policy is covered.
+1. Each Security Function that traces back to a Security Policy MUST actually contribute to the enforcement of it.
+1. The tracing MUST NOT just be a simple relation of Security Functions with Security Policies, but a detailed explanation.
+1. MUST be coherent with [ASE_SPD.1](../methodology.md#%EF%B8%8F-risk-assessment-analysis-ase_spd1).
 
 ### REQ-4 - Shall be internally consistent.
 1. All [Security Functions](../definitions.md#security-function) MUST logically fit together without contradictions or ambiguities.

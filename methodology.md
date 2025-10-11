@@ -14,20 +14,20 @@
 
 ### 🛡️ Risk Assessment Analysis (ASE_SPD.1)
 * **SPD-1** - Describe all threats in terms of a threat agent, an asset and an adverse action.
-* **SPD-2** - Describe the OSPs.
+* **SPD-2** - Describe the Security Policies.
 * **SPD-3** - Describe the assumptions about the operational environment of the PwDE.
 
 ### 🎯 Security Objectives (ASE_OBJ.1)
 * **OBJ-1** - Describe the security objectives for the operational environment.
 * **OBJ-2** - Trace each security objective for the operational environment to the threat it addresses.
-* **OBJ-3** - Trace each security objective for the operational environment to the OSPs which it enforces.
+* **OBJ-3** - Trace each security objective for the operational environment to the Security Policies which it enforces.
 * **OBJ-4** - Trace each security objective for the operational environment to the assumptions it supports.
 * **OBJ-5** - Demonstrate that the security objectives for the operational environment uphold all assumptions.
 
 ### 🔐 Security Functionalities (ASE_REQ.1 & ASE_TSS.1)
 * **REQ-1** - Describe the Security Functions of the PwDE.
 * **REQ-2** - For each threat, the Security Functions must demonstrate that they are suitable to meet that threat.
-* **REQ-3** - For each OSP, the Security Functions must demonstrate that they are suitable to enforce that OSP.
+* **REQ-3** - The Security Functions must demonstrate that they are suitable to enforce each Security Policy.
 * **REQ-4** - Shall be internally consistent.
 
 For more details see the Playbook of [Chapter 1 - Manufacturer risk assessment](playbook/chapter1.md).

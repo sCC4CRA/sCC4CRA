@@ -11,11 +11,6 @@ The assumptions are made about the operational environment to ensure the PwDE ca
 ### Interactions
 A description of interactions among or between subsystems identifies the reasons subsystems or modules communicate and characterizes the information that is passed. It need not define the information to the same level of detail as an interface specification. For example, it would be sufficient to say: “Subsystem X requests a block of memory from the memory manager, which responds with the location of the allocated memory.”
 
-### OSPs
-Organizational security policies (OSPs) are security rules, procedures, or guidelines imposed in the operational environment. OSPs can be established by an organization controlling the operational environment of the PwDE, or by legislative or regulatory bodies. OSPs can apply to the PwDE and/or its operational environment.
-
-OSPs are defined in terms of rules or guidelines that must be followed by the PwDE and/or its environment. The OSPs MAY NOT be needed if all security objectives are derived from assumptions and threats only.
-
 ### Maintain security
 Refers to the measures required to ensure the PwDE remains protected during delivery. Interpretation depends on:
 * Nature of the PwDE (hardware, software, or both).
@@ -40,6 +35,12 @@ A PwDE can implement the notion of privilege and protect itself by using privile
 ### Security Enforcing Interfaces
 An interface is Security Enforcing if it triggers any [Security Function](definitions.md#security-function) from [[ASE_REQ.1]](methodology.md#-security-functionalities-ase_req1--ase_tss1). Some interfaces may enforce [Security Function](definitions.md#security-function), while others may not.
 
+### Security Policies
+Modified concept from the Organizational security policies (OSPs) of Common Criteria. They are security rules, procedures, or guidelines imposed in the operational environment. Security Policies can be established by an organization controlling the operational environment of the PwDE, or by legislative or regulatory bodies. Security Policies can apply to the PwDE and/or its operational environment.
+
+Security Policies are defined in terms of rules or guidelines that must be followed by the PwDE and/or its environment. The Security Policies MAY NOT be needed if all security objectives are derived from assumptions and threats only.
+
+
 ### Self-protection
 Self-protection refers to the ability of the TSF to protect itself from manipulation by external entities that may result in changes to the TSF. Without these properties, the TSF could be disabled from performing its security services. The notion of self-protection applies only to the services provided by the PwDE through its interfaces.
 
@@ -62,32 +63,14 @@ An entity that has the potential to exercise adverse actions on assets protected
 Unique identification can be achieved using elements like a version number or publication date.
 
 ## From CRA regulation
-### Access management mechanism Requirement
-
-The Requirement of the Annex I Part I (2)(d) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
-* *ensure protection from unauthorised access by appropriate control mechanisms, including but not limited to authentication, identity or access management systems, and report on possible unauthorised access;*
-
-The Access Management requirement needs to be covered by Security Functions. As an example from CC2022R1:
-
-**Access control**
-* The PwDE enforces the {list of Control Mechanisms} on {list of subjects, objects and operations among subjects and objects covered}.
-* The TSF shall enforce the {access controls} to objects based on the following: {list of subjects and objects controlled}.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(d)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
-
 ### Availability of functions Requirement
 The Requirement of the Annex I Part I (2)(h) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *protect the availability of essential and basic functions, also after an incident, including through resilience and mitigation measures against denial-of-service attacks;*
 
-This requirement needs to be covered by Security Functions. As an example using CC2022R1:
+This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [RLM]
 
-* **Degraded fault tolerance**
-  * The TSF shall ensure the operation of {List the Security mechanisms} when the following failures occur: {List the types of failures}.
-
-* **Failure with preservation of secure state**
-  * The PwDE preserves a secure state when the following types of failures occur: {List the types of failures}.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(h)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### Actively exploited vulnerabilities
 Means a vulnerability for which there is reliable evidence that a malicious actor has exploited it in a system without permission of the system owner. Actively exploited vulnerabilities concern instances where a manufacturer establishes that a security breach affecting its users or any other natural or legal persons has resulted from a malicious actor exploiting a flaw in one of the products with digital elements made available on the market by the manufacturer.
@@ -96,41 +79,16 @@ Examples of such vulnerabilities could be weaknesses in a product’s identifica
 
 Severe incidents impacting the security of the product with digital elements refer to situations where a cybersecurity incident affects the development, production, or maintenance processes of the manufacturer in such a way that it could increase cybersecurity risk for users or other persons. Such an incident could include a situation where an attacker has successfully introduced malicious code into the release channel via which the manufacturer releases security updates to users.
 
-### Authentication mechanism Requirement
-
-The Requirement of the Annex I Part I (2)(d) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
-* *ensure protection from unauthorised access by appropriate control mechanisms, including but not limited to authentication, identity or access management systems, and report on possible unauthorised access;*
-
-The Authentication requirement needs to be covered by Security Functions. As an example from CC2022R1:
-
-* **End User authentication**
-  * The PwDE allows {list of actions} on behalf of the user to be performed before the user is authenticated.
-  * The PwDE requires each user to be successfully authenticated before allowing any other TSF-mediated actions on behalf of that user.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(d)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
-
 ### Confidential Data Requirement
 
 The Requirement of the Annex I Part I (2)(e) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *protect the confidentiality of stored, transmitted or otherwise processed data, personal or other, such as by encrypting relevant data at rest or in transit by state of the art mechanisms, and by using other technical means;*
 
-This requirement needs to be covered by Security Functions. As an example using CC2022R1:
+This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [SSM]
+* [CCK]
 
-* **Stored data confidentiality**
-  * The PwDE ensures the confidentiality of {Choose data} while it is stored in the {Choose memories}, providing memory encryption with robust [cryptographic algorithms](../definitions.md#cryptographic-algorithm) {Choose algorithms}.
-
-**Inter-PwDE trusted channels**
-* The PwDE provides a communication channel between itself and another trusted IT product that is logically distinct from other communication channels and provides assured identification of its endpoints and protection of the channel data from modification or disclosure.
-* The PwDE permits {Indicate end points} to initiate communication via the trusted channel.
-* The PwDE initiates communication via the trusted channel for {list of functions for which a trusted channel is required}.
-
-**Trusted path**
-* The PwDE provides a communication path between itself and {selection: remote or local} users that is logically distinct from other communication paths and provides assured identification of its endpoints and protection of the communicated data from {selection: modification, disclosure, or {Other types}}.
-* The PwDE permits {selection: the PwDE, local users, remote users} to initiate communication via the trusted path.
-* The PwDE requires the use of the trusted path for {selection: initial user authentication or {other services}}.
-* The PwDE shall perform the Trusted Path in accordance with a specified [cryptographic algorithm](../definitions.md#cryptographic-algorithm) {Choose Cryptographic algorithm} and cryptographic key sizes {Choose key sizes} that meet the CRA Regulation (REGULATION (EU) 2024/2847).
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(e)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### 👉❗ Cryptographic algorithms
 The European Commission has not defined any accepted cryptographic algorithms to be used. As a general reference for EUCC, the [Agreed Cryptographic Mechanisms](https://certification.enisa.europa.eu/certification-library/eucc-certification-scheme_en#guidelines-for-eucc) are used. Further guidelines on this are expected to be provided by the European Commission.
@@ -148,17 +106,15 @@ Further guidance regarding this concept is expected by the European Commission.
 ### EUVD 
 European Vulnerability Database (EUVD) established pursuant to Article 12(2) of Directive (EU) 2022/2555. The European Vulnerability Database will assist manufacturers in detecting known exploitable vulnerabilities in their products, in order to ensure that secure products are made available on the market.
 
-### Identification mechanism Requirement
+### Identification, Authentication and Access Management Mechanism Requirement
 The Requirement of the Annex I Part I (2)(d) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *ensure protection from unauthorised access by appropriate control mechanisms, including but not limited to authentication, identity or access management systems, and report on possible unauthorised access;*
 
-The Identity requirement needs to be covered by Security Functions. As an example from CC2022R1:
+The Identity requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [ACM]
+* [AUM]
 
-* **End User identification:**
-  * (optional) The PwDE allows {list of actions} on behalf of the user to be performed before the end user is identified.
-  * The PwDE requires each end user to be successfully identified before allowing any security actions on behalf of that end user.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(d)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### Intended purpose
 Means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials, statements, and technical documentation.
@@ -167,24 +123,10 @@ Means the use for which a product with digital elements is intended by the manuf
 The Requirement of the Annex I Part I (2)(f) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *protect the integrity of stored, transmitted or otherwise processed data, personal or other, commands, programs and configuration against any manipulation or modification not authorised by the user, and report on corruptions;*
 
-This requirement needs to be covered by Security Functions. As an example using CC2022R1:
+This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [SSM]
 
-* **Stored data integrity monitoring and action**
-  * The PwDE monitors user data stored in containers controlled by the PwDE for integrity errors on all objects, based on the following attributes: {Choose attributes}.
-  * Upon detection of a data integrity error, the PwDE {describe the action}.
-
-* **Inter-PwDE trusted channels**
-  * The PwDE provides a communication channel between itself and another trusted IT product that is logically distinct from other communication channels and provides assured identification of its endpoints and protection of the channel data from modification or disclosure.
-  * The PwDE permits {Indicate end points} to initiate communication via the trusted channel.
-  * The PwDE initiates communication via the trusted channel for {list of functions for which a trusted channel is required}.
-
-* **Trusted path**
-  * The PwDE provides a communication path between itself and {selection: remote or local} users that is logically distinct from other communication paths and provides assured identification of its endpoints and protection of the communicated data from {selection: modification, disclosure, or {Other types}}.
-  * The PwDE permits {selection: the PwDE, local users, remote users} to initiate communication via the trusted path.
-  * The PwDE requires the use of the trusted path for {selection: initial user authentication or {other services}}.
-  * The PwDE shall perform the Trusted Path in accordance with a specified [cryptographic algorithm](../definitions.md#cryptographic-algorithm) {Choose Cryptographic algorithm} and cryptographic key sizes {Choose key sizes} that meet the CRA Regulation (REGULATION (EU) 2024/2847).
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(f)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. from the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### 👉❗ Known exploitable vulnerability
 This concept requires further definition/guidance by the European Commission. For example, in which cases can a vulnerability be considered too complex? In Common Criteria, there is the concept of attack potential, by which product vulnerabilities can be classified as Residual Vulnerabilities. This concept could fit into the "CRA concept" of "Risk-based analysis," but further clarifications are required.
@@ -193,32 +135,20 @@ This concept requires further definition/guidance by the European Commission. Fo
 The Requirement of the Annex I Part I (2)(i) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *minimise the negative impact by the products themselves or connected devices on the availability of services provided by other devices or networks;*
 
-This requirement needs to be covered by Security Functions. As an example using CC2022R1:
+This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [GEC]
+* [LIM]
 
-* **PwDE initialization**
-  * The PwDE provides an initialization function that is self-protected for integrity and authenticity.
-  * The PwDE initialization function ensures that certain properties hold on certain elements immediately before establishing the TSF in a secure initial state, as specified in {describe}.
-  * The PwDE initialization function detects and responds to errors and failures during initialization such that the PwDE {selection: is halted, successfully completes initialization} with {selection: reduced functionality, signaling error state, {List of actions}}.
-  * The PwDE initialization function only interacts with the PwDE in {list defined methods} during initialization.
-
-* **PwDE self-testing**
-  * The PwDE runs a suite of the following self-tests {selection: during initial start-up, periodically during normal operation, at the request of the authorized user, under the conditions {List conditions under which self-test should occur}} to demonstrate the correct operation of {selection: {List parts of PwDE}, the PwDE}: {List of self-tests run by the PwDE}.
-  * The PwDE provides authorized users with the capability to verify the integrity of {selection: {List parts of PwDE data}, PwDE data} and {selection: {assignment: parts of PwDE}, PwDE}.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(i)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. from the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### Mitigation mechanism requirement
 The Requirement of the Annex I Part I (2)(k) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *be designed, developed and produced to reduce the impact of an incident using appropriate exploitation mitigation mechanisms and techniques;*
 
-This requirement needs to be covered by Security Functions. As an example using CC2022R1:
+This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [GEC-12]
 
-* **Failure with preservation of secure state**
-  * The PwDE preserves a secure state when the following types of failures occur: {List the types of failures}.
-* **Manual recovery**
-  * After {list of failures/service discontinuities}, the PwDE enters a maintenance mode where the ability to return to a secure state is provided.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(k)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. from the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### non-Applicability of an ESR
 The reason for the non-applicability of an ESR COULD be that an ESR is incompatible with the nature of a PwDE. If certain ESRs are not applicable, but the manufacturer has identified cybersecurity risks, it SHOULD take measures to address those risks by other means.
@@ -239,69 +169,33 @@ Means the use of a product with digital elements in a way that is not in accorda
 The Requirement of the Annex I Part I (2)(l) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *provide security related information by recording and monitoring relevant internal activity, including the access to or modification of data, services or functions, with an opt-out mechanism for the user;*
 
-This requirement needs to be covered by Security Functions. As an example using CC2022R1:
+This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [LGM]
+* [NMM]
+* [TCM]
+* [MON]
+* [LGM]
 
-* **Audit data generation**
-  * The PwDE generates audit data of the following auditable events:
-    * Start-up and shutdown of the audit functions;
-    * All auditable events for the {if applicable, choose level} level of audit;
-    * {Other auditable events}
-  * The PwDE records within the audit data at least the following information:
-    * Date and time of the auditable event, type of event, subject identity (if applicable), and the outcome (success or failure) of the event;
-    * For each auditable event type, based on the auditable event definitions of the functional components included in {...}.
-
-* **Specification of Management Functions**
-  * The TSF shall be capable of performing the following management functions:
-    * Enable and disable the audit data generation function.
-    * Configure which events shall be audited (subject to FAU_GEN.1).
-    * Manage user roles and privileges.
-    * Manage TSF configuration parameters related to security.
-    * Initialize and reset security-relevant parameters.
-
-* **Security roles**
-  * The PwDE maintains the roles {List the authorized identified roles}.
-  * The PwDE is able to associate end users with roles.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(l)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. from the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### Removal of Data requirement
 The Requirement of the Annex I Part I (2)(m) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *provide the possibility for users to securely and easily remove on a permanent basis all data and settings and, where such data can be transferred to other products or systems, ensure that this is done in a secure manner.*
 
-This requirement needs to be covered by Security Functions. As an example for the Removal of Data (the transfer of data to another system is not described) requirement using CC2022R1:
+This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [DLM]
 
-* **Specification of Management Functions**
-  * The PwDE is capable of performing the following management functions:
-    * Securely and permanently remove all user data and settings.
-    * Restore the system to its factory state.
-
-* **Subset residual information protection**
-  * The PwDE ensures that any previous information content of a resource is made unavailable upon the {selection: allocation of the resource to, deallocation of the resource from} the following objects: {list of objects}.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(m)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. from the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### Reporting unauthorized access Requirement
 The Requirement of the Annex I Part I (2)(d) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *ensure protection from unauthorised access by appropriate control mechanisms, including but not limited to authentication, identity or access management systems, and report on possible unauthorised access;*
 
-The Reporting unauthorized access Requirement needs to be covered by Security Functions. As an example from CC2022R1:
+The Reporting unauthorized access Requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [ACM]
+* [AUM]
 
-* **Audit data generation**
-  * The PwDE generates audit data of the following auditable events:
-    * Start-up and shutdown of the audit functions;
-    * All auditable events for the {if applicable, choose level} level of audit;
-    * {Other auditable events}
-  * The PwDE records at least the following information within the audit data:
-    * Date and time of the auditable event, type of event, subject identity (if applicable), and the outcome (success or failure) of the event;
-    * For each auditable event type, based on the auditable event definitions of the functional components included in {...}.
-
-* **Potential violation analysis**
-  * The PwDE applies a set of rules when monitoring the audited events and, based on these rules, indicates a potential violation of the enforcement of the SFRs.
-  * The TSF enforces the following rules for monitoring audited events:
-    * Accumulation or combination of {Choose auditable events} known to indicate a potential security violation;
-    * {Other rules}
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(d)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. from the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### Reset to its original state Requirement
 The Requirement of the Annex I Part I (2)(b) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
@@ -310,19 +204,10 @@ The Requirement of the Annex I Part I (2)(b) of the [CRA Regulation](https://eur
 This requirement is partially covered by [ADV_ARC.2](../methodology.md#-security-architecture-adv_arc2). However, the requirement:
 * *including the possibility to reset the product to its original state*
 
-needs to be covered by a Security Function of the PwDE. An example from CC2022R1:
+needs to be covered by a Security Function of the PwDE. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+* [GEC-10]
 
-* **Specification of Management Functions**
-  * The PwDE is capable of performing the following management functions:
-    * Reset the PwDE to its original factory configuration.
-    * Remove all user data.
-    * Restore all default security settings.
-
-This Security Function can be skipped if:
-1. An agreement as mentioned in the ESR is provided with the technical documentation.
-2. The SPD in the ST identifies other measures in the operational environment that compensate for the need for a secure default configuration, such as declaring an assumption for trusted administrators to ensure they perform a secure initial configuration following the AGD_PRE.1 guidance.
-
-Further information on the coverage of this requirement using CC2022R1 can be found in section "ESR (2)(b)" of the [CRA by EUCC Annex](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en). Furthermore, other Security Functions described in other standards e.g. from the future standards delevoped as per the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) could be used.
+Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### SBOM
 Stands for Software Bill Of Materials. It is not defined in the CRA Regulation nor in the Blue Guidance. From [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng):
@@ -339,12 +224,13 @@ I did not find any formal definition of Secure Decommissioning in the [CRA Regul
 ### Security Function
 Modified concept from Common Criteria "Security Functional Requirement (SFR)". This is a security mechanism (no clear equivalent in [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng)) that counters a threat.  
 
-In Common Criteria, there is high formality related to SFRs; in this methodology, it has been reduced to the bare minimum. Manufacturers can define their own Security Functions, although it is recommended to use existing defined concepts to facilitate analysis. Recommended sources instead of proprietary security functions include:
+In Common Criteria, there is high formality related to SFRs; in this methodology, it has been reduced to the bare minimum. Manufacturers can define their own Security Functions, although should be uses existing defined concepts to facilitate analysis e.g:
 * Common Criteria 2022 R1
 * SESIP (EN17927)
 * EN18031
-* CEN/CENELEC standards referenced in the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) Requests 2 to 14
 * Other standards relevant to the threats and security measures of that PwDE.
+
+It is recommended to use the Security Controls defined as part of the  CEN/CENELEC standards referenced in the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) Requests 2 to 14, more specifically the work from CEN-CLC/JTC 13 WG 9. Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
 ### Security Function enforcing subsystem
 Modified concept from Common Criteria "SFR-Enforcing subsystem". It is a subsystem responsible for enforcing a Security Function, also called "SF-enforcing." SF-enforcing behavior refers to how a subsystem provides the functionality that implements a Security Function of [ASE_REQ.1].
