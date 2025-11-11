@@ -26,9 +26,11 @@
 
 ### 🔐 Security Functionalities (ASE_REQ.1 & ASE_TSS.1)
 * **REQ-1** - Describe the Security Functions of the PwDE.
+* **REQ.COMP-1** - Identify, for each third-party component, the security functions that are relevant for your PwDE.
 * **REQ-2** - For each threat, the Security Functions must demonstrate that they are suitable to meet that threat.
 * **REQ-3** - The Security Functions must demonstrate that they are suitable to enforce each Security Policy.
 * **REQ-4** - Shall be internally consistent.
+
 
 For more details see the Playbook of [Chapter 1 - Manufacturer risk assessment](playbook/chapter1.md).
 
@@ -63,12 +65,13 @@ For more details see the Playbook of [Chapter 2 - Guidance](playbook/chapter2.md
 * **INT-3** - Describe the security action and error messages of the Interfaces.
 * **INT-4** - Add a tracing between the Security Functions with the corresponding Interfaces.
 
-### 🧱 Security Architecture (ADV_ARC.2)
+### 🏰 Security Architecture (ADV_ARC.2)
 * **ARC-1** - Describe the limitation of the attack surface provided by the PwDE.
 * **ARC-2** - Describe how the PwDE initialisation process is secure.
 * **ARC-3** - Demonstrate that the PwDE protects itself from tampering.
 * **ARC-4** - Demonstrate that the PwDE prevents bypass of the Security Functions.
 * **ARC-5** - Demonstrate that the PwDE enforces a secure default configuration when it is delivered.
+* **ARC.COMP-1** - Demonstrate, for each third-party component, how the PwDE fulfills its requirements. 
 
 ### 🗂️ PwDE Design (ADV_TDS.2)
 * **TDS-1** - Describe the structure of the PwDE in terms of subsystems.
@@ -87,10 +90,11 @@ For more details see the Playbook of [Chapter 3 - Development](playbook/chapter3
 
 ## Chapter 4 - Life Cycle
 
-### 🧩 SBOM (ALC_CMS.2 & ALC_SBM.1)
-* **SBM-1** - Include the PwDE itself and the parts that comprises the PwDE, each part uniquely identified.
-* **SBM-2** - For each hardware component that comprises the PwDE, shall indicate the developer of the item.
-* **SBM-3** - For each item of the SBOM, shall indicate the developer of the item in specific format
+### 🧩 BOM (ALC_CMS.2 & ALC_SBM.1)
+* **BOM-1** - Include the PwDE itself and the parts that comprises the PwDE, each part uniquely identified.
+* **BOM-2** - For each hardware component that comprises the PwDE, shall indicate the developer of the item.
+* **BOM-3** - For each item of the BOM, shall indicate the developer of the item in specific format
+* **BOM.COMP-1** - For each component, shall be installed the correct version.
 
 ### 🔄 Life Cycle (ALC_LCD.1)
 * **LCD-1** - Describe the processes used to develop and maintain the PwDE.

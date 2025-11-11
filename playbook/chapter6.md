@@ -10,17 +10,15 @@
 
 ### VAN-2 - Search public sources for potential vulnerabilities in the third-party components.
 1. For components with the CE marking affixed, the actively exploited vulnerabilities SHOULD be checked into the [EUVD](../definitions.md#euvd).
-1. MAY use the [ALC_SBM.1](../methodology.md#-sbom-alc_cms2--alc_sbm1) to match its components against public [vulnerability databases](../definitions.md#vulnerability-databases).
+1. MAY use the [[BOM]](../methodology.md#-bom-alc_cms2--alc_sbm1) to match its components against public [vulnerability databases](../definitions.md#vulnerability-databases).
 
 ### VAN-3 - Perform an independent vulnerability analysis using the Technical Documentation and the code.
 1. The analysis MUST comprise the whole PwDE.
 1. The analysis MUST comprise all the configurations defined in [[ASE_INT.1]](../methodology.md#-introduction-and-description-ase_int1).
 1. The analysis MUST be based on the [state of the art](../definitions.md#-state-of-the-art) at the time of placing the PwDE in the market.
 1. The analysis MUST include a [Due Diligence](../definitions.md#-due-diligence) of third-party products without a CE Mark.
-1. Components of the [ALC_SBM.1](../methodology.md#-sbom-alc_cms2--alc_sbm1) with CE Mark MAY NOT need to be assessed.
-1. SHOULD be made by a a third-party expert or an employee not related with the PwDE development.
-1. SHOULD use the knowledge of the Technical Documentation and code to identify potential flaws.
-1. SHOULD use the knowledge of the Technical Documentation and code to identify potential errors.
+1. Components of the [[BOM]](../methodology.md#-bom-alc_cms2--alc_sbm1) with CE Mark MAY NOT need to be assessed.
+1. SHOULD be made by a [third-party expert](../definitions.md#third-party-expert).
 
 ### VAN-4 - Devise penetration testing based on the identified potential vulnerabilities.
 1. SHOULD prepare for penetration testing as necessary to determine the susceptibility of the PwDE.

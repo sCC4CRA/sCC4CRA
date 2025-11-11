@@ -15,7 +15,7 @@
 ### INT-4 - Add a tracing between the Security Functions with the corresponding Interfaces.
 1. The tracing MUST serve as a guide to which [Security Functions](definitions.md#security-function) are related to [Security Enforcing interfaces](../definitions.md#security-enforcing-interfaces).
 1. The Security Functions described MUST be coherent with [[ASE_REQ.1]](../methodology.md#-security-functionalities-ase_req1--ase_tss1).
-## 🧱 Security Architecture (ADV_ARC.2)
+## 🏰 Security Architecture (ADV_ARC.2)
 ### ARC-1 - Describe the limitation of the attack surface provided by the PwDE.
 1. The PwDE MUST deactivate interfaces and services not required for usage by default.
 1. The PwDE MUST deactivate debug interfaces and functions.
@@ -43,11 +43,22 @@
 1. SHOULD describe the interfaces to access the asset and their state in the [Security by Default configuration](../definitions.md#-security-by-default-configuration).
 1. For each of these items, SHOULD describe how their state at [Security by Default configuration](../definitions.md#-security-by-default-configuration) prevents PwDE to be vulnerated.
 1. For tailor-made PwDEs, this requirement MIGHT be bypassed after an explicit agreement with the user.
+
+### ARC.COMP-1 - Demonstrate, for each third-party component, how the PwDE fulfills its requirements. 
+1. MUST demonstrate that the PwDE fulfills the requirements from the component.
+1. The requirements MUST be coherent with the Security Functions covered by the component described in [[ASE_REQ.1]](../methodology.md#-security-functionalities-ase_req1--ase_tss1).
+1. MUST consider the requirements 4, 5 and 8 of the [Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II) from the component guidance.
+1. SHOULD consider, where applicable, the Technical Documentation described in [Annex VII](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VII) of the component.
+1. MUST be coherent with [[ADV_FSP.2]](../methodology.md#-interfaces-adv_fsp2) and [[ADV_TDS.2]](../methodology.md#%EF%B8%8F-pwde-design-adv_tds2).
+1. In case the requirement of the component is not followed, a corresponding reasoning MUST be provided.
+
+⚠️ If the PwDE does not have [third-party components](../definitions.md#third-party-component), this requirement is NOT applicable.
+
 ## 🗂️ PwDE Design (ADV_TDS.2)
 ### TDS-1 - Describe the structure of the PwDE in terms of subsystems.
 1. MUST describe the structure of the PwDE in terms of [subsystems](../definitions.md#subsystem).
-1. The description MUST be coherent with the [[ADV_TDS.2]](../methodology.md#%EF%B8%8F-pwde-design-adv_tds2), [[ADV_REQ.1]](../methodology.md#-security-functionalities-ase_req1--ase_tss1) and the [[AGD_OPE.1]](../methodology.md#-operational-guidance-agd_ope1).
-1. Each piece of third party software described in the [[ALC_SBM.1]](../methodology.md#-sbom-alc_cms2--alc_sbm1) MUST have its own unique subsystem.
+1. The description MUST be coherent with the [[ADV_REQ.1]](../methodology.md#-security-functionalities-ase_req1--ase_tss1) and the [[AGD_OPE.1]](../methodology.md#-operational-guidance-agd_ope1).
+1. Each piece of third party software described in the [[BOM]](../methodology.md#-bom-alc_cms2--alc_sbm1) MUST have its own unique subsystem.
 ### TDS-2 - Describe the Security Functions behaviour of the subsystems.
 1. MUST classify all the subsystems in [Security Function enforcing](../definitions.md#security-function-enforcing-subsystem), [Security Function supporting](../definitions.md#security-function-supporting-subsystem) and [non-Security Function](../definitions.md#non-security-function-subsystem).
 1. Non-Security Function subsystems MIGHT NOT need detailed description of their internal functioning.

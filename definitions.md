@@ -216,7 +216,7 @@ Stands for Software Bill Of Materials. It is not defined in the CRA Regulation n
 From [TR-03183](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html):
 * *A “Software Bill of Materials” (SBOM) is a machine-processable file containing supply chain relationships and details of the components used in a software product. It supports automated processing of information on these components, covering both “primary components” and used (e.g., external/third-party) components.*
 
-As an example, a manufacturer could check the format proposed in [BSI TR-03183-2](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html).
+The [SBOM](../definitions.md#sbom) MUST contain at least the top-level third-party software components used by the PwDE. As an example, a manufacturer could check the format proposed in [BSI TR-03183-2](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html).
 
 ### 👉❗ Secure decommissioning
 I did not find any formal definition of Secure Decommissioning in the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng). Further definitions might be provided.
@@ -263,6 +263,9 @@ The support period MUST include at least the month and year, be clearly specifie
 
 If the expected lifetime is less than five years, the support period **could** cover the full lifetime. This choice **should** be justified based on the PwDE’s nature.  
 
+### Third-Party Component
+A Third-Party Component is any software or hardware element developed or provided by an external entity and integrated into a product or system. In this methodology when referring to "Third-Party Component", it is considered that it has the CE-mark, third party components without the CE-mark, are considered as part of the product, since the manufacturer is obliged to perform a [due diligence](definitions.md#-due-diligence) of that component.
+
 ### Vulnerability Databases
 CRA Regulation references the European vulnerability database (EUVD):
 * *European vulnerability database established pursuant to Article 12(2) of Directive (EU) 2022/2555. The European vulnerability database will assist manufacturers in detecting known exploitable vulnerabilities in their products, in order to ensure that secure products are made available on the market.*
@@ -273,6 +276,14 @@ In general, searches across different "Common/European/National Vulnerability Da
 ## From TR-03183 Technical Specification
 ### Machine-processable
 SBOMs are defined as machine-processable files in this Technical Guideline. This implies machines can create, read, modify, process, analyze, and evaluate content, and act based on the data. The content itself is well-defined and structured. The term “machine-readable” is avoided due to multiple interpretations.
+
+### Third-party expert
+Evaluator, which can be part of the manufacturer organisation or a third party. The following aspects have to be taken into account when selecting an evaluator:
+* The evaluator needs sufficient technical knowledge as well as knowledge in assessment methods to perform the assessment in a qualified manner.
+* The evaluator requires access to, or be provided with, all information required to perform the assessment.
+* The evaluator has to be impartial and should not be involved in the development of the PwDE, to facilitate an independent assessment.
+
+It is always important to perform the assessment with an appropriately critical mindset and to stay objective, even if the evaluation is performed by the development team. They should use the knowledge of the Technical Documentation and code to identify potential flaws and/or errors.
 
 
 

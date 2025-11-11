@@ -44,7 +44,7 @@
 1. For each separately delivered part MUST be identified by a [unique identification](../definitions.md#unique-identification).
 1. For each separately delivered part format (e.g., binary, PDF) MUST be described.
 1. For each separately delivered part, the delivery method used to provide it to the end user MUST be described.
-1. Optionally, MIGHT also include the SBOM as described in [[ALC_SBM.1]](../methodology.md#-sbom-alc_cms2--alc_sbm1).
+1. Optionally, MIGHT also include the BOM as described in [[BOM]](../methodology.md#-bom-alc_cms2--alc_sbm1).
 1. For HW PwDEs, MUST include photographs or illustrations showing external features, marking and internal layout.
 1. For products with multiple physical components, all of them MUST be identified and described.
 
@@ -57,7 +57,6 @@
 1. MUST consider the length of time the product is expected to be in use.
 1. MUST include a risk-based analysis of cybersecurity risks based on the [intended purpose](../definitions.md#intended-purpose).
 1. MUST include a risk-based analysis of cybersecurity risks based on the [reasonably foreseeable use](../definitions.md#reasonably-foreseeable-use).
-1. MUST describe the conditions of use, of the PwDE.
 1. MUST describe the [security impact and probability](../definitions.md#-security-impact-and-probability) for each of the threats.
 1. MUST indicate whether and how the security requirements set out in [Annex I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I) Part I(2) are applicable to the PwDE.
 1. MUST also indicate how the manufacturer is to apply [Annex I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I) Part I(1).
@@ -101,6 +100,15 @@
 1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Mitigation mechanism](../definitions.md#mitigation-mechanism-requirement).
 1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Recording and Monitoring](../definitions.md#recording-and-monitoring-requirement).
 1. MUST add a [Security Function](../definitions.md#security-function) to cover the [Removal of Data](../definitions.md#removal-of-data-requirement).
+
+:warning: Some of the previous security functions might be covered by [third-party components](../definitions.md#third-party-component) described in [REQ.COMP-1].
+
+### REQ.COMP-1 - Identify, for each third-party component, the security functions that are relevant for your PwDE.
+1. MUST describe for each [third-party component](../definitions.md#third-party-component) present in [[BOM]](../methodology.md#-bom-alc_cms2--alc_sbm1) the relevant [Security Function](../definitions.md#security-function).
+1. Each identified [Security Function](../definitions.md#security-function) MUST be able to meet a threat.
+1. For EUCC or SESIP CE-marked components, the [Security Function](../definitions.md#security-function) defined in the Security Target MIGHT be directly used.
+
+⚠️ If the PwDE does not have [third-party components](../definitions.md#third-party-component), this requirement is NOT applicable.
 
 ### REQ-2 - For each threat, the Security Functions must demonstrate that they are suitable to meet that threat.
 1. Each [Security Function](../definitions.md#security-function) MUST trace back to at least one threat for the PwDE.
