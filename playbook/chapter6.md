@@ -15,8 +15,8 @@
 ### VAN-3 - Perform an independent vulnerability analysis using the Technical Documentation and the code.
 1. The analysis MUST comprise the whole PwDE.
 1. The analysis MUST comprise all the configurations defined in [[ASE_INT.1]](../methodology.md#-introduction-and-description-ase_int1).
-1. The analysis MUST be based on the [state of the art](../definitions.md#-state-of-the-art) at the time of placing the PwDE in the market.
-1. The analysis MUST include a [Due Diligence](../definitions.md#-due-diligence) of third-party products without a CE Mark.
+1. The analysis MUST be based on the [state of the art](../definitions.md#-state-of-the-art) at the time of placing the PwDE on the market.
+1. The analysis MUST include a [Due Diligence](../definitions.md#due-diligence) of third-party products without a CE Mark.
 1. Components of the [[BOM]](../methodology.md#-bom-alc_cms2--alc_sbm1) with CE Mark MAY NOT need to be assessed.
 1. SHOULD be made by a [third-party expert](../definitions.md#third-party-expert).
 
@@ -30,15 +30,13 @@
 ⚠️ If no potential vulnerabilities were identified, this requirement DOES NOT apply.
 ### VAN-5 - Conduct penetration testing based on the identified potential vulnerabilities.
 1. The PwDE used to perform the penetration testing MUST be identified as per [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
-1. The PwDE SHOULD be in [Security by Default configuration](../definitions.md#-security-by-default-configuration) as per [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
+1. The PwDE SHOULD be in [Security by Default configuration](../definitions.md#security-by-default-configuration) as per [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
 1. MUST be coherent with the security objectives for the operational environment described in [[ASE_OBJ.1]](../methodology.md#-security-objectives-ase_obj1).
 1. If any test resources are used, they MUST be calibrated and used correctly.
 1. MUST record the actual results of the penetration tests.
 
 ⚠️ If no penetration testing was devised, this requirement DOES NOT apply.
-### VAN-6 - Conclude that the product is placed in the market without known exploitable vulnerabilities.
+### VAN-6 - Conclude that the product is placed on the market without known exploitable vulnerabilities.
 
-1. The manufacturer MUST fix all known [actively exploited vulnerabilities](../definitions.md#actively-exploited-vulnerabilities) before placing the PwDE in the market.
-1. The manufacturer MUST fix all [known exploitable vulnerabilities](../definitions.md#-known-exploitable-vulnerability) before placing the PwDE in the market.
-
-⚠️ The section 5.3.2 of the [TR-03183](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html) interprets as optional the fixing [known exploitable vulnerabilities](../definitions.md#-known-exploitable-vulnerability).
+1. The manufacturer MUST fix all known [actively exploited vulnerabilities](../definitions.md#actively-exploited-vulnerabilities) before [placing the PwDE on the market](../definitions.md#placed-on-the-market).
+1. The manufacturer MUST fix all [known exploitable vulnerabilities](../definitions.md#-known-exploitable-vulnerability) before [placing the PwDE on the market](../definitions.md#placed-on-the-market).

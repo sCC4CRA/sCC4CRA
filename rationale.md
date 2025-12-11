@@ -165,7 +165,7 @@ The methodology aligns with **AVA_VAN.5**, not because of the required attack po
 For the rationale of the covered requirements see [Cyber Resilience Act implementation by EUCC](https://certification.enisa.europa.eu/publications/cyber-resilience-act-implementation-eucc-and-its-applicable-technical-elements_en).
 
 ### Annex I Part II
-Not Covered ❌. Same rationale as per the requirement "(2)(c)" of [Annex I Part I](rationale.md#annex-i-part-i).
+Not Covered ❌. Same rationale as for the requirement "(2)(c)" of [Annex I Part I](rationale.md#annex-i-part-i).
 
 ### Annex VII
 | Requirement |  Coverage      |  Comments    |

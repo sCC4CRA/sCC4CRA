@@ -17,7 +17,7 @@
 1. Expected test results MUST be unambiguous and consistent with expected behaviour given the testing approach.
 ### FUN-4 - The actual test results shall be consistent with the expected test results.
 1. The PwDE used to perform the testing MUST be identified as per [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
-1. The PwDE SHOULD be in [Security by Default configuration](../definitions.md#-security-by-default-configuration) as per [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
+1. The PwDE SHOULD be in [Security by Default configuration](../definitions.md#security-by-default-configuration) as per [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
 1. If results need to be processed before comparing, the test documentation SHOULD explain how.
 1. The manufacturer MUST format expected results for easy comparison with actual results.
 ## 🔍 Depth (ATE_DPT.1)

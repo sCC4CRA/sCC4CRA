@@ -1,12 +1,12 @@
 # Chapter 2 - Guidance
 
 ## 🔧 Operational Guidance (AGD_OPE.1)
-### OPE-1 - Describe, for each end user, the Security Functions that should be controlled.
-1. MUST identify, for each end user, the [Security Functions](../definitions.md#security-function) allowed.
+### OPE-1 - Describe, for each end user, the security controls that should be controlled.
+1. MUST identify, for each end user, the [security controls](../definitions.md#security-control) allowed.
 1. MUST identify, for each end user, the interface.
 1. MUST be coherent with [[ASE_REQ.1]](../methodology.md#-security-functionalities-ase_req1--ase_tss1) and [[ASE_OBJ.1]](../methodology.md#-security-objectives-ase_obj1).
 1. MUST describe, for each end user, the interface tipology and the reason for such interface.
-1. The user guidance SHOULD contain warnings regarding the use of these Security Functions.
+1. The user guidance SHOULD contain warnings regarding the use of these security controls.
 1. Warnings SHOULD address expected effects.
 1. Warnings SHOULD address possible side effects.
 1. Warnings SHOULD address possible interactions with other interfaces.
@@ -19,13 +19,13 @@
 1. Warnings SHOULD address expected effects.
 1. Warnings SHOULD address possible side effects.
 1. Warnings SHOULD address possible interactions with other interfaces.
-### OPE-3 - Describe, for each end user, how to use the available interfaces in a secure manner.
+### OPE-3 - Describe, for each end user, how to use the available interfaces provided in a secure manner.
 1. SHOULD provide advice regarding effective use of the PwDE.
 ### OPE-4 - Describe, for each end user, the available interfaces.
 1. MUST describe all security [parameters](../definitions.md#parameter) under the control of the user.
 1. SHOULD indicate secure values as appropriate.
-1. SHOULD contain an overview of the Security Functions visible at the user interfaces.
-1. SHOULD identify and describe the purpose, behaviour and interrelationships of the interfaces and Security functions.
+1. SHOULD contain an overview of the security controls visible at the user interfaces.
+1. SHOULD identify and describe the purpose, behaviour and interrelationships of the interfaces and security controls.
 1. For each interface SHOULD describe the method(s) by which the interface is invoked.
 1. For each interface SHOULD describe the end user-configurable settings, their purpose, valid/secure values and insecure uses.
 1. For each interface SHOULD describe the immediate response, message or code returned.
@@ -33,7 +33,7 @@
 ### OPE-5 - For each end user, clearly present each security actions they can perform.
 1. MUST include changing the security characteristics of entities under the control of the PwDE.
 1. MUST describe, for each end user, the security events that may occur and the actions they may need to take.
-1. SHOULD define security events may occur so the end users can keep the PwDE in the [security by default configuration](../definitions.md#-security-by-default-configuration). 
+1. SHOULD define security events may occur so the end users can keep the PwDE in the [security by default configuration](../definitions.md#security-by-default-configuration). 
 ### OPE-6 - Identify all possible modes of operation of the PwDE.
 1. MUST identify all modes of operation.
 1. MAY include operation failures.
@@ -64,7 +64,7 @@
 
 ⚠️ If decommissioning only involves sending the TOE to the manufacturer (or other), this does not apply.
 
-### DEC-3 - Decommissioning must prevent access to PwDE-protected assets after it’s retired.
+### DEC-3 - Decommissioning must prevent access to PwDE-protected assets after it is retired.
 1. The decommission procedure MUST be coherent with the mechanisms described in the [[ADV_TDS.2]](../methodology.md#%EF%B8%8F-pwde-design-adv_tds2).
 1. The decommission procedure deletion of assets MUST be coherent with the defined in [[ASE_SPD.1]](../methodology.md#%EF%B8%8F-risk-assessment-analysis-ase_spd1).
 1. The decommission procedure MUST leave the assets effectively destroyed or rendered unusable or unrecoverable.
@@ -86,8 +86,8 @@
 1. MUST include; for each step, a the decision tree on the next step depended on success, failure or problems at the current step.
 1. MUST include changing the installation specific security characteristics of entities under the control of the PwDE.
 1. MUST describe how to handle exceptions and problems.
-1. The secure installation SHOULD bring PwDE into the [security default configuration](../definitions.md#-security-by-default-configuration).
-1. For tailor-made PwDEs it MIGHT NOT bring into the [security default configuration](../definitions.md#-security-by-default-configuration), it MUST also be coherent with the [[ADV_ARC.2]](../methodology.md#-security-architecture-adv_arc2).
+1. The secure installation SHOULD bring PwDE into the [security default configuration](../definitions.md#security-by-default-configuration).
+1. For tailor-made PwDEs it MIGHT NOT bring into the [security default configuration](../definitions.md#security-by-default-configuration), it MUST also be coherent with the [[ADV_ARC.2]](../methodology.md#-security-architecture-adv_arc2).
 ### INS-3 - Shall describe the secure preparation of the operational environment.
 1. MUST be coherent with the security objectives as described in the [[ASE_OBJ.1]](../methodology.md#-security-objectives-ase_obj1).
 

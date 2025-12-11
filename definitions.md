@@ -2,7 +2,7 @@
 
 The following are the concepts transported from [CC2022R1](https://www.commoncriteriaportal.org/cc/index.cfm) or [CRA regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng). 
 
-⚠️ The definitions highligthed with "👉❗" are intended to be updated with further clarifications or guidance by the European Commision. 
+⚠️ The definitions highlighted with "👉❗" are intended to be updated with further clarifications or guidance by the European Commision. 
 
 ## From Common Criteria 2022 R1 methodology
 ### Assumptions
@@ -33,13 +33,12 @@ The purpose of an interface is a high-level description of the general goal of t
 A PwDE can implement the notion of privilege and protect itself by using privileged-mode routines to handle user data. The PwDE can make use of processor-based separation mechanisms (e.g., privilege levels or rings) to separate TSF code and data from user code and data. This concept can be applied in different types of products in various forms.
 
 ### Security Enforcing Interfaces
-An interface is Security Enforcing if it triggers any [Security Function](definitions.md#security-function) from [[ASE_REQ.1]](methodology.md#-security-functionalities-ase_req1--ase_tss1). Some interfaces may enforce [Security Function](definitions.md#security-function), while others may not.
+An interface is Security Enforcing if it triggers any [security control](definitions.md#security-control) from [[ASE_REQ.1]](methodology.md#-security-functionalities-ase_req1--ase_tss1). Some interfaces may enforce [security controls](definitions.md#security-function), while others may not.
 
 ### Security Policies
 Modified concept from the Organizational security policies (OSPs) of Common Criteria. They are security rules, procedures, or guidelines imposed in the operational environment. Security Policies can be established by an organization controlling the operational environment of the PwDE, or by legislative or regulatory bodies. Security Policies can apply to the PwDE and/or its operational environment.
 
 Security Policies are defined in terms of rules or guidelines that must be followed by the PwDE and/or its environment. The Security Policies MAY NOT be needed if all security objectives are derived from assumptions and threats only.
-
 
 ### Self-protection
 Self-protection refers to the ability of the TSF to protect itself from manipulation by external entities that may result in changes to the TSF. Without these properties, the TSF could be disabled from performing its security services. The notion of self-protection applies only to the services provided by the PwDE through its interfaces.
@@ -67,7 +66,7 @@ Unique identification can be achieved using elements like a version number or pu
 The Requirement of the Annex I Part I (2)(h) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *protect the availability of essential and basic functions, also after an incident, including through resilience and mitigation measures against denial-of-service attacks;*
 
-This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+This requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [RLM]
 
 Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
@@ -84,7 +83,7 @@ Severe incidents impacting the security of the product with digital elements ref
 The Requirement of the Annex I Part I (2)(e) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *protect the confidentiality of stored, transmitted or otherwise processed data, personal or other, such as by encrypting relevant data at rest or in transit by state of the art mechanisms, and by using other technical means;*
 
-This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+This requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [SSM]
 * [CCK]
 
@@ -93,15 +92,13 @@ Further information can be found in the slides from webinar ["Unlocking CRA Secu
 ### 👉❗ Cryptographic algorithms
 The European Commission has not defined any accepted cryptographic algorithms to be used. As a general reference for EUCC, the [Agreed Cryptographic Mechanisms](https://certification.enisa.europa.eu/certification-library/eucc-certification-scheme_en#guidelines-for-eucc) are used. Further guidelines on this are expected to be provided by the European Commission.
 
-### 👉❗ Due Diligence
-When integrating third-party components, including free and open-source software not yet on the market, manufacturers must exercise due diligence to ensure compliance with the Regulation’s essential cybersecurity requirements. The level of due diligence should match the component’s cybersecurity risk and may include:
-
-* **Conformity check:** Verify that the component’s manufacturer demonstrates compliance with the Regulation, e.g., CE marking.  
-* **Security updates:** Ensure the component receives regular security updates.  
-* **Vulnerability check:** Verify the component is free from known vulnerabilities in the European vulnerability database or other public sources.  
-* **Additional testing:** Perform extra security testing if necessary.  
-
-Further guidance regarding this concept is expected by the European Commission.
+### Due Diligence
+When integrating third-party components, including free and open-source software not yet on the market, manufacturers must exercise due diligence to ensure compliance with the Regulation’s essential cybersecurity requirements. Further clarification in [FAQs on the Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-implementation):
+* *The appropriate level of due diligence depends on the nature and level of cybersecurity risk of a given component and is aimed at ensuring that the components that are integrated do not compromise the cybersecurity of the manufacturer’s product with digital elements. The risk assessment of the product with digital elements also informs the appropriate level of due diligence. Where a component or a product is associated with more risks, the actions that a manufacturer should put in place while exercising due diligence should be more extensive than for a component or product associated with fewer risks. In line with Recital 34, examples of one or more actions that manufacturers may undertake include:*
+  * *checking if the component already bears the CE marking;*
+  * *verifying that a component receives regular security updates, such as by checking its security updates history;*
+  * *verifying in the European vulnerability database established pursuant to Article 12(2) of Directive (EU) 2022/2555 or other publicly accessible vulnerability databases the vulnerabilities applicable to a component and designing, developing and manufacturing the product with digital elements integrating the component in such a way that these vulnerabilities do not compromise the cybersecurity of the product with digital elements;*
+  * *carrying out additional security tests, such as fuzz testing, penetration testing, firmware analysis, side-channel analysis, red-team exercises, network traffic analysis, sensor spoofing.*
 
 ### EUVD 
 European Vulnerability Database (EUVD) established pursuant to Article 12(2) of Directive (EU) 2022/2555. The European Vulnerability Database will assist manufacturers in detecting known exploitable vulnerabilities in their products, in order to ensure that secure products are made available on the market.
@@ -110,7 +107,7 @@ European Vulnerability Database (EUVD) established pursuant to Article 12(2) of 
 The Requirement of the Annex I Part I (2)(d) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *ensure protection from unauthorised access by appropriate control mechanisms, including but not limited to authentication, identity or access management systems, and report on possible unauthorised access;*
 
-The Identity requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+The Identity requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [ACM]
 * [AUM]
 
@@ -123,19 +120,22 @@ Means the use for which a product with digital elements is intended by the manuf
 The Requirement of the Annex I Part I (2)(f) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *protect the integrity of stored, transmitted or otherwise processed data, personal or other, commands, programs and configuration against any manipulation or modification not authorised by the user, and report on corruptions;*
 
-This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+This requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [SSM]
 
 Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
-### 👉❗ Known exploitable vulnerability
-This concept requires further definition/guidance by the European Commission. For example, in which cases can a vulnerability be considered too complex? In Common Criteria, there is the concept of attack potential, by which product vulnerabilities can be classified as Residual Vulnerabilities. This concept could fit into the "CRA concept" of "Risk-based analysis," but further clarifications are required.
+### Known exploitable vulnerability
+No explicit definition in the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng). Further clarification in [FAQs on the Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-implementation):
+* *In fact, not all vulnerabilities are exploitable under practical operational conditions. Some vulnerabilities can only be exploited in theoretical conditions (e.g. in a lab or in a simulation) and/or not under conditions which would occur in the operational environment of a given product with digital elements. Whether a vulnerability is exploitable needs to be addressed on a case-by-case basis, depending on the specific operational and technical conditions, including for example the extent to which the vulnerable code is invoked or loaded when the product is in use; the level and type of access required to carry out the exploit; whether compensating controls are already in place to mitigate exploitation.*
+
+In this case the concept *compensating controls* is likely being taken from the ISO 62443 and would be equivalent to other protections like the [Security Objective for the Environment](#security-objectives-for-the-operational-environment) or the [Security Policies](#security-policies) of this methodology.
 
 ### Minimise Impact Requirement
 The Requirement of the Annex I Part I (2)(i) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *minimise the negative impact by the products themselves or connected devices on the availability of services provided by other devices or networks;*
 
-This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+This requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [GEC]
 * [LIM]
 
@@ -145,7 +145,7 @@ Further information can be found in the slides from webinar ["Unlocking CRA Secu
 The Requirement of the Annex I Part I (2)(k) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *be designed, developed and produced to reduce the impact of an incident using appropriate exploitation mitigation mechanisms and techniques;*
 
-This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+This requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [GEC-12]
 
 Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
@@ -153,8 +153,8 @@ Further information can be found in the slides from webinar ["Unlocking CRA Secu
 ### non-Applicability of an ESR
 The reason for the non-applicability of an ESR COULD be that an ESR is incompatible with the nature of a PwDE. If certain ESRs are not applicable, but the manufacturer has identified cybersecurity risks, it SHOULD take measures to address those risks by other means.
 
-### non-Security Function subsystem
-Modified concept from Common Criteria "SFR-non-interfering." It is a subsystem that does not play any role in enforcing or supporting a Security Function.
+### non-security control subsystem
+Modified concept from Common Criteria "SFR-non-interfering." It is a subsystem that does not play any role in enforcing or supporting a [security control](definitions.md#security-control).
 
 ### 👉❗ Product Type
 Common Criteria 2022R1 does not clearly describe product typologies. Currently, the CRA Regulation neither defines a classification of product types in the Default products category. Further decisions are expected to clarify whether risk assessments will be based on product types (or vertical standards), similarly as per Important and Critical Products.
@@ -169,7 +169,7 @@ Means the use of a product with digital elements in a way that is not in accorda
 The Requirement of the Annex I Part I (2)(l) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *provide security related information by recording and monitoring relevant internal activity, including the access to or modification of data, services or functions, with an opt-out mechanism for the user;*
 
-This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+This requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [LGM]
 * [NMM]
 * [TCM]
@@ -182,7 +182,7 @@ Further information can be found in the slides from webinar ["Unlocking CRA Secu
 The Requirement of the Annex I Part I (2)(m) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *provide the possibility for users to securely and easily remove on a permanent basis all data and settings and, where such data can be transferred to other products or systems, ensure that this is done in a secure manner.*
 
-This requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+This requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [DLM]
 
 Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
@@ -191,7 +191,7 @@ Further information can be found in the slides from webinar ["Unlocking CRA Secu
 The Requirement of the Annex I Part I (2)(d) of the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) requires:
 * *ensure protection from unauthorised access by appropriate control mechanisms, including but not limited to authentication, identity or access management systems, and report on possible unauthorised access;*
 
-The Reporting unauthorized access Requirement needs to be covered by Security Functions. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+The Reporting unauthorized access Requirement needs to be covered by [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [ACM]
 * [AUM]
 
@@ -204,7 +204,7 @@ The Requirement of the Annex I Part I (2)(b) of the [CRA Regulation](https://eur
 This requirement is partially covered by [ADV_ARC.2](../methodology.md#-security-architecture-adv_arc2). However, the requirement:
 * *including the possibility to reset the product to its original state*
 
-needs to be covered by a Security Function of the PwDE. It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
+needs to be covered by a [security controls](definitions.md#security-control). It is recommended to use the Security Controls from CEN-CLC/JTC 13 WG 9, e.g.:
 * [GEC-10]
 
 Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
@@ -221,25 +221,17 @@ The [SBOM](../definitions.md#sbom) MUST contain at least the top-level third-par
 ### 👉❗ Secure decommissioning
 I did not find any formal definition of Secure Decommissioning in the [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng). Further definitions might be provided.
 
-### Security Function
-Modified concept from Common Criteria "Security Functional Requirement (SFR)". This is a security mechanism (no clear equivalent in [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng)) that counters a threat.  
+### Security control enforcing subsystem
+Modified concept from Common Criteria "SFR-Enforcing subsystem". It is a subsystem responsible for enforcing a [security control](definitions.md#security-control), also called "SC-enforcing." SC-enforcing behavior refers to how a subsystem provides the functionality that implements a [security control](definitions.md#security-control) of [ASE_REQ.1].
 
-In Common Criteria, there is high formality related to SFRs; in this methodology, it has been reduced to the bare minimum. Manufacturers can define their own Security Functions, although should be uses existing defined concepts to facilitate analysis e.g:
-* Common Criteria 2022 R1
-* SESIP (EN17927)
-* EN18031
-* Other standards relevant to the threats and security measures of that PwDE.
+### Security control supporting subsystem
+Modified concept from Common Criteria "SFR-Supporting subsystem." It is a subsystem relied upon by a [security control](definitions.md#security-control) enforcing subsystem to implement a [security control](definitions.md#security-control). Also called "SC-supporting."
 
-It is recommended to use the Security Controls defined as part of the  CEN/CENELEC standards referenced in the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) Requests 2 to 14, more specifically the work from CEN-CLC/JTC 13 WG 9. Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
+### Security by Default configuration
+Security by Default configuration or secure-by-default. This term is used in CRA, e.g., in Annex I Part I (2)(b), but is never formally defined. In general, it should mean a configuration in which the security of the PwDE or its assets is guaranteed. A default configuration is also the state in which the PwDE is delivered to the user prior to execution of instructions in [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
 
-### Security Function enforcing subsystem
-Modified concept from Common Criteria "SFR-Enforcing subsystem". It is a subsystem responsible for enforcing a Security Function, also called "SF-enforcing." SF-enforcing behavior refers to how a subsystem provides the functionality that implements a Security Function of [ASE_REQ.1].
-
-### Security Function supporting subsystem
-Modified concept from Common Criteria "SFR-Supporting subsystem." It is a subsystem relied upon by a Security Function enforcing subsystem to implement a Security Function. Also called "SF-supporting."
-
-### 👉❗ Security by Default configuration
-This term is used in CRA, e.g., in Annex I Part I (2)(b), but is never formally defined. In general, it should mean a configuration in which the security of the PwDE or its assets is guaranteed. A default configuration is also the state in which the PwDE is delivered to the user prior to execution of instructions in [[AGD_PRE.1]](../methodology.md#-installation-guidance-agd_pre1).
+Further clarification in [FAQs on the Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/factpages/cyber-resilience-act-implementation):
+* *Where manufacturers place on the market a component for integration into another product with digital elements, they do not retain control on how the integrating manufacturer adjusts the component’s configuration. The obligation to ensure a secureby-default configuration, therefore, only applies to the component when it is placed on the market separately, and not to how it is later configured or deployed by integrating manufacturers.*
 
 ### 👉❗ Security Impact and probability
 This term is retrieved from TR-03183, specifically from requirement "REQ_RA 1.1". There is no definition in CRA or TR-03183. Further guidance is expected.
@@ -253,6 +245,8 @@ The single point of contact MUST allow users to choose their preferred communica
 
 ### 👉❗ State of the art
 This concept is used in both CC2022R1 and CRA Regulation. But this concept needs further clarifications from the European Commission since it might differentiate between what is a vulnerability and what is not.
+
+⚠️ Although the [TR-03183-1](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html) provides a definition, it is formulated in a rather general manner and lacks specific detail.
 
 ### Support Period
 The support period refers to the timeframe during which a manufacturer must ensure that vulnerabilities of a product with digital elements (PwDE) are addressed effectively and in accordance with the essential cybersecurity requirements in Part II of Annex I. The support period must be no less than five years, unless the expected lifetime of the PwDE is shorter, in which case vulnerability handling must cover the full lifetime. Where the expected use exceeds five years (e.g., hardware components, network devices, or software like OS or video-editing tools), manufacturers should provide a correspondingly longer support period.  
@@ -277,14 +271,27 @@ In general, searches across different "Common/European/National Vulnerability Da
 ### Machine-processable
 SBOMs are defined as machine-processable files in this Technical Guideline. This implies machines can create, read, modify, process, analyze, and evaluate content, and act based on the data. The content itself is well-defined and structured. The term “machine-readable” is avoided due to multiple interpretations.
 
+### Placed on the market
+“Placing on the market” means the moment when a product is made available for the first time on the EU market. This is done by a manufacturer or an importer, and it refers to each individual product, not to a type or model. Once a product has been placed on the market, it can be resold or transferred further down the supply chain without being considered as “placed on the market” again. Example: A manufacturer in Germany produces a batch of smart thermostats. When these thermostats are sold for the first time to a distributor in France, they are “placed on the market".
+
 ### Third-party expert
 Evaluator, which can be part of the manufacturer organisation or a third party. The following aspects have to be taken into account when selecting an evaluator:
 * The evaluator needs sufficient technical knowledge as well as knowledge in assessment methods to perform the assessment in a qualified manner.
-* The evaluator requires access to, or be provided with, all information required to perform the assessment.
+* The evaluator requires access to all information required to perform the assessment.
 * The evaluator has to be impartial and should not be involved in the development of the PwDE, to facilitate an independent assessment.
 
 It is always important to perform the assessment with an appropriately critical mindset and to stay objective, even if the evaluation is performed by the development team. They should use the knowledge of the Technical Documentation and code to identify potential flaws and/or errors.
 
+## From CEN/CLC JTC 13 WG 9 PT.2
 
+### Security Control
+Concept defined by the CEN/CLC JTC 13 WG 9 PT.2 and presented in the webinar [Unlocking CRA Security Controls](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event). It is equivalent to the concept from Common Criteria "Security Functional Requirement (SFR)". This is a security mechanism (no clear equivalent in [CRA Regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng)) that counters a threat.  
 
+In Common Criteria, there is high formality related to SFRs; in this methodology, it has been reduced to the bare minimum. Manufacturers can define their own security controls, although it is recommended to use existing concepts to facilitate analysis e.g defined in:
+* Common Criteria 2022 R1
+* SESIP (EN17927)
+* EN18031
+* Other standards relevant to the threats and security measures of that PwDE.
+
+It is recommended to use the Security Controls defined as part of the  CEN/CENELEC standards referenced in the [Commission's Implementing Decision](https://ec.europa.eu/transparency/documents-register/detail?ref=C(2025)618&lang=en) Requests 2 to 14, more specifically the work from CEN-CLC/JTC 13 WG 9. Further information can be found in the slides from webinar ["Unlocking CRA Security Controls"](https://www.cencenelec.eu/news-events/events/2025/2025-09-08-preparation-for-the-une-event/).
 
